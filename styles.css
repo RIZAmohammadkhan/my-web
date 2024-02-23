@@ -9,11 +9,11 @@ body {
 
 .profile-container {
     width: 75%;
-    max-width: 1200px;
-    text-align: center;
+    max-width: 1100px;
+    text-align: justify;
     background: #171717; /* Darker shade for container */
-    padding: 20px;
-    border-radius: 15px;
+    padding: 15px;
+    border-radius: 17px;
     color: #FFFFFF; /* Light text for better readability */
 }
 
@@ -21,7 +21,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .profile-about,
@@ -35,7 +35,8 @@ body {
     padding: 0 20px;
     border-radius: 10px;
     background: #272727; /* Adjusted to a slightly lighter shade for contrast */
-    color: #DDDDDD; /* Light text color for readability */
+    color: #DDDDDD;
+    margin-right: 17px; /* Light text color for readability */
 }
 
 .profile-photo img {
@@ -47,6 +48,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     transition: transform 0.3s ease;
+    padding-right: 17px; 
 }
 
 .profile-photo img:hover {
@@ -85,6 +87,10 @@ body {
     display: block;
     margin: 0 auto 10px;
 }
+.gpt-profile:hover .gpt-photo {
+    transform: scale(1.05);
+}
+
 
 .more-gpts {
     display: block;
@@ -131,7 +137,6 @@ section h2 {
     }
 }
 
-/* Corrected placement of .hidden-gpts display:none; */
 .hidden-gpts {
     display: none;
 }
