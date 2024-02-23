@@ -1,6 +1,5 @@
-function seeMore(sectionId) {
-    // You would implement the logic to see more items here.
-    console.log("See more from section:", sectionId);
-    // For example, this could involve loading more content via AJAX and updating the DOM accordingly.
-  }
-  
+document.querySelector('.more-gpts').addEventListener('click', function() {
+    var hiddenGpts = document.querySelector('.hidden-gpts');
+    hiddenGpts.style.display = 'flex'; // Show the hidden GPT profiles
+    this.style.display = 'none'; // Hide the button
+});

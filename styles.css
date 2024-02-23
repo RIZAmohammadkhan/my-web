@@ -34,7 +34,7 @@ body {
 .profile-activity {
     padding: 0 20px;
     border-radius: 10px;
-    background: #171717; /* Slightly lighter than container for contrast */
+    background: #272727; /* Adjusted to a slightly lighter shade for contrast */
     color: #DDDDDD; /* Light text color for readability */
 }
 
@@ -53,11 +53,12 @@ body {
     transform: scale(1.1);
 }
 
-.gpt-container {
+.gpt-container,
+.hidden-gpts {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-bottom: 0px;
+    align-items: stretch; /* Ensures that the flex items are the same height */
 }
 
 .gpt-profile {
@@ -73,7 +74,7 @@ body {
 }
 
 .gpt-profile:hover {
-    background-color: #414141; /* Hover effect for cards */
+    background-color: #515151; /* Hover effect for cards */
 }
 
 .gpt-photo {
@@ -128,4 +129,9 @@ section h2 {
         width: 100%;
         margin: 10px 0;
     }
+}
+
+/* Corrected placement of .hidden-gpts display:none; */
+.hidden-gpts {
+    display: none;
 }
