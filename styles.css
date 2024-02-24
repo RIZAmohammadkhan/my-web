@@ -1,20 +1,35 @@
+:root {
+    --bg-color: #212121;
+    --container-bg-color: #171717;
+    --text-color: #FFFFFF;
+    --detail-bg-color: #323232;
+    --hover-bg-color: #515151;
+    --primary-color: #10A37F;
+    --secondary-color: #555;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 20px;
     padding: 0;
     display: flex;
     justify-content: center;
-    background: #212121; /* Dark background */
+    background: var(--bg-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
 }
 
 .profile-container {
     width: 75%;
     max-width: 1100px;
     text-align: justify;
-    background: #171717; /* Darker shade for container */
+    background: var(--container-bg-color);
     padding: 15px;
     border-radius: 17px;
-    color: #FFFFFF; /* Light text for better readability */
+    color: var(--text-color);
 }
 
 .profile-header {
@@ -34,9 +49,9 @@ body {
 .profile-activity {
     padding: 0 20px;
     border-radius: 10px;
-    background: #272727; /* Adjusted to a slightly lighter shade for contrast */
+    background: var(--detail-bg-color);
     color: #DDDDDD;
-    margin-right: 17px; /* Light text color for readability */
+    margin-right: 17px;
 }
 
 .profile-photo img {
@@ -48,7 +63,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     transition: transform 0.3s ease;
-    padding-right: 17px; 
+    padding-right: 17px;
 }
 
 .profile-photo img:hover {
@@ -60,23 +75,23 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: stretch; /* Ensures that the flex items are the same height */
+    align-items: stretch;
 }
 
 .gpt-profile {
     text-align: center;
     width: calc(33.333% - 40px);
     margin: 10px;
-    background: #323232; /* Darker shade for individual profile cards */
+    background: var(--detail-bg-color);
     border-radius: 10px;
     padding: 20px;
     text-decoration: none;
-    color: #E0E0E0; /* Lighter text for readability */
+    color: #E0E0E0;
     transition: background-color 0.3s;
 }
 
 .gpt-profile:hover {
-    background-color: #515151; /* Hover effect for cards */
+    background-color: var(--hover-bg-color);
 }
 
 .gpt-photo {
@@ -87,15 +102,17 @@ body {
     display: block;
     margin: 0 auto 10px;
 }
+
 .gpt-profile:hover .gpt-photo {
     transform: scale(1.05);
 }
 
-
-.more-gpts {
+.more-gpts,
+#tryNow,
+#closeDetail {
     display: block;
     padding: 10px 20px;
-    background-color: #10A37F;
+    background-color: var(--primary-color);
     color: #fff;
     text-align: center;
     border: none;
@@ -103,10 +120,12 @@ body {
     cursor: pointer;
     text-decoration: none;
     margin: 20px auto;
+    text-decoration: none;
 }
 
-.more-gpts:hover{
-    background-color : #555;
+.more-gpts:hover,
+#closeDetail:hover {
+    background-color: var(--secondary-color);
 }
 
 .gpt-detail-view {
@@ -114,28 +133,26 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 80%; /* Increase the max width for more space */
-    width: auto;  /* Limit the width to ensure it fits on screen */
-    max-height: 100vh; /* Limit the height to ensure it fits on screen */
-    overflow-y: auto; /* Allow scrolling if content is too long */
-    background: #212121;
+    max-width: 80%;
+    width: auto;
+    max-height: 100vh;
+    overflow-y: auto;
+    background: var(--bg-color);
     color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,1);
-    z-index: 1001; /* Above the overlay */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    z-index: 1001;
     text-align: center;
 }
 
-/* Ensure the image is circular and fits well */
 .gpt-detail-photo {
-    width: 150px; /* Adjust size as needed */
+    width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 0 auto; /* Center the image */
+    margin: 0 auto;
 }
-
 
 .gpt-detail-container video {
     width: 100%;
@@ -143,26 +160,10 @@ body {
     margin-top: 20px;
 }
 
-#closeDetail {
-    display: block;
-    padding: 10px 20px;
-    background-color: #10A37F;
-    color: #fff;
-    text-align: center;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    text-decoration: none;
-    margin: 20px auto;
-}
-
-#closeDetail:hover {
-    background-color: #555;
-}
 section h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #FFFFFF; /* Ensure headings are readable */
+    color: var(--text-color);
 }
 
 /* Media Queries */
@@ -176,14 +177,21 @@ section h2 {
     }
 }
 
-@media only screen and (max-width: 480px) {
-    .profile-container {
-        padding: 5px;
+@media only screen and (max-width: 768px) {
+    .profile-container,
+    .gpt-detail-view {
+        width: 95%;
     }
-@media (max-width: 768px) {
-        .gpt-detail-view {
-            width: 95%;
-        }
+
+    .gpt-profile {
+        width: calc(50% - 20px);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .profile-container,
+    .gpt-detail-view {
+        padding: 5px;
     }
 
     .gpt-profile {
@@ -194,4 +202,33 @@ section h2 {
 
 .hidden-gpts {
     display: none;
+}
+
+.gpt-detail-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.gpt-detail-buttons a,
+.gpt-detail-buttons button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    flex-grow: 1;
+}
+
+#closeDetail {
+    background-color: var(--container-bg-color);
+}
+
+.gpt-detail-buttons a:hover,
+.gpt-detail-buttons button:hover {
+    background-color: var(--secondary-color);
 }
