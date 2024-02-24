@@ -54,3 +54,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+window.addEventListener('load', () => {
+    const loadingBanner = document.getElementById('loadingBanner');
+    if (loadingBanner) {
+        // Optional: Fade out the banner before removing it
+        loadingBanner.style.opacity = '0';
+        loadingBanner.style.transition = 'opacity 0.5s ease';
+
+        // Wait for the fade-out transition before removing the banner
+        setTimeout(() => {
+            loadingBanner.style.display = 'none';
+        }, 500); // Match the duration of the opacity transition
+    }
+});
+
