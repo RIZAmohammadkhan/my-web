@@ -197,6 +197,21 @@ section h2 {
         align-items: center;
     }
 
+    @media (min-width: 1024px) {
+        .gpt-detail-container {
+            padding: 2rem 4rem; /* more padding on larger screens */
+        }
+    
+        .gpt-detail-container h1 {
+            font-size: clamp(1.5rem, 2.5vw, 2rem); /* scales between 1.5rem and 2rem */
+        }
+    
+        .gpt-detail-container p {
+            font-size: clamp(1rem, 1.5vw, 1.25rem); /* scales between 1rem and 1.25rem */
+        }
+    }
+    
+
     .profile-about,
     .profile-activity {
         width: 100%; /* Take full width of the container */
@@ -367,4 +382,15 @@ section h2 {
 @keyframes rotateLetter {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+.gpt-detail-container img {
+    max-width: 100%; /* ensures image is not bigger than its container */
+    height: auto; /* maintains aspect ratio */
+}
+
+.gpt-detail-container h1,
+.gpt-detail-container p {
+    max-width: 800px; /* maximum width for readability */
+    margin-left: auto; /* center text block */
+    margin-right: auto; /* center text block */
 }
