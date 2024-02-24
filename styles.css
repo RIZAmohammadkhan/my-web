@@ -6,11 +6,12 @@
     --hover-bg-color: #515151;
     --primary-color: #10A37F;
     --secondary-color: #555;
+    --btn-border-radius: 10px;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 20px;
+    margin: 2rem;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -27,7 +28,7 @@ a {
     max-width: 1100px;
     text-align: justify;
     background: var(--container-bg-color);
-    padding: 15px;
+    padding: 1.5rem;
     border-radius: 17px;
     color: var(--text-color);
 }
@@ -36,7 +37,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 3rem;
 }
 
 .profile-about,
@@ -47,23 +48,23 @@ a {
 
 .profile-about,
 .profile-activity {
-    padding: 0 20px;
+    padding: 0 2rem;
     border-radius: 10px;
     background: var(--detail-bg-color);
     color: #DDDDDD;
-    margin-right: 17px;
+    margin-right: 1.7rem;
 }
 
 .profile-photo img {
     display: block;
-    width: 250px;
-    height: 250px;
+    width: 25vw;
+    height: 25vw;
     border-radius: 50%;
     object-fit: cover;
     margin-left: auto;
     margin-right: auto;
     transition: transform 0.3s ease;
-    padding-right: 17px;
+    padding-right: 1.7rem;
 }
 
 .profile-photo img:hover {
@@ -80,11 +81,11 @@ a {
 
 .gpt-profile {
     text-align: center;
-    width: calc(33.333% - 40px);
-    margin: 10px;
+    width: calc(33.333% - 4rem);
+    margin: 1rem;
     background: var(--detail-bg-color);
     border-radius: 10px;
-    padding: 20px;
+    padding: 2rem;
     text-decoration: none;
     color: #E0E0E0;
     transition: background-color 0.3s;
@@ -95,12 +96,12 @@ a {
 }
 
 .gpt-photo {
-    width: 80px;
-    height: 80px;
+    width: 8vw;
+    height: 8vw;
     border-radius: 50%;
     object-fit: cover;
     display: block;
-    margin: 0 auto 10px;
+    margin: 0 auto 1rem;
 }
 
 .gpt-profile:hover .gpt-photo {
@@ -111,7 +112,7 @@ a {
 #tryNow,
 #closeDetail {
     display: block;
-    padding: 10px 20px;
+    padding: 1rem 2rem;
     background-color: var(--primary-color);
     color: #fff;
     text-align: center;
@@ -119,7 +120,7 @@ a {
     border-radius: 10px;
     cursor: pointer;
     text-decoration: none;
-    margin: 20px auto;
+    margin: 2rem auto;
     text-decoration: none;
 }
 
@@ -139,7 +140,7 @@ a {
     overflow-y: auto;
     background: var(--bg-color);
     color: #fff;
-    padding: 20px;
+    padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     z-index: 1001;
@@ -147,8 +148,8 @@ a {
 }
 
 .gpt-detail-photo {
-    width: 150px;
-    height: 150px;
+    width: 15vw;
+    height: 15vw;
     border-radius: 50%;
     object-fit: cover;
     margin: 0 auto;
@@ -157,23 +158,23 @@ a {
 .gpt-detail-container video {
     width: 100%;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 2rem;
 }
 
 section h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     color: var(--text-color);
 }
 
 /* Media Queries */
 @media only screen and (max-width: 768px) {
     .profile-container {
-        padding: 10px;
+        padding: 1rem;
     }
 
     .gpt-profile {
-        width: calc(50% - 20px);
+        width: calc(50% - 2rem);
     }
 }
 
@@ -184,21 +185,100 @@ section h2 {
     }
 
     .gpt-profile {
-        width: calc(50% - 20px);
+        width: calc(50% - 2rem);
     }
 }
 
 @media only screen and (max-width: 480px) {
-    .profile-container,
-    .gpt-detail-view {
-        padding: 5px;
+    /* Adjust the profile section layout */
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-about,
+    .profile-activity {
+        width: 100%; /* Take full width of the container */
+        margin: 0; /* Reset any margins */
+        padding: 1rem; /* Consistent padding */
+        box-sizing: border-box; /* Padding included in width */
+        text-align: center;
+    }
+
+    .profile-photo {
+        width: 100%; /* Take full width to center the image */
+        padding: 0; /* Reset any padding */
+        box-sizing: border-box; /* Padding included in width */
+        display: flex; /* Use flexbox for centering */
+        justify-content: center; /* Center the image horizontally */
+        align-items: center; /* Center the image vertically */
+        margin-bottom: 1rem; /* Space below the profile photo */
+    
+    }
+
+    .profile-photo img {
+        width: 40vw; /* This will set the width relative to the viewport width */
+        height: 40vw; /* This should be the same as the width to maintain a 1:1 aspect ratio */
+        max-width: 150px; /* Adjust max width as needed */
+        max-height: 150px; /* Adjust max height as needed */
+        border-radius: 50%; /* This will make it round */
+        object-fit: cover; /* This will cover the area without stretching */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Adjust the GPT container and profiles for proper margin and overflow */
+    .gpt-container {
+        flex-direction: column;
+        align-items: center;
     }
 
     .gpt-profile {
-        width: 100%;
-        margin: 10px 0;
+        width: 100%; /* Full width to prevent overflow */
+        margin: 1rem 0; /* Adds margin to the top and bottom */
+        padding: 1rem; /* Adds padding inside the GPT profile */
+        box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    }
+
+    .gpt-photo {
+        width: 35vw; /* Increase icon size relative to viewport */
+        height: 35vw; /* Maintain aspect ratio */
+        max-width: 120px; /* Set max width to prevent overflow */
+        max-height: 120px; /* Set max height for aspect ratio */
+        margin-bottom: 1rem; /* Margin below the icon */
+    }
+
+    /* Adjust the text size and margins for readability */
+    .gpt-profile h3,
+    .gpt-profile p {
+        font-size: 5vw; /* Increase font size for better readability */
+        margin: 0.5rem 0; /* Adjust spacing around the text */
+    }
+    .gpt-profile {
+        position: relative; /* Confirm this is set to position the absolute element */
+        padding-bottom: 3rem; /* Increase padding at the bottom to make space for the 'Coming Soon' label */
+    }
+
+    .coming-soon {
+        position: absolute; /* This should already be set */
+        bottom: -1.5rem; /* Adjust the position to move the label below the container */
+        left: 50%; /* Center the label */
+        transform: translateX(-50%); /* Align the center of the label with the center of the container */
+        /* Other styles remain the same */
+    }
+
+    /* Make sure buttons and links are easily clickable */
+    .more-gpts,
+    #tryNow,
+    #closeDetail {
+        padding: 1.2rem 2.4rem; /* Increase padding for larger touch targets */
+        font-size: 4vw; /* Adjust font size */
     }
 }
+
+
+
 
 .hidden-gpts {
     display: none;
@@ -207,9 +287,9 @@ section h2 {
 .gpt-detail-buttons {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 1rem;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 2rem;
 }
 #tryNow,
 #closeDetail {
@@ -222,7 +302,7 @@ section h2 {
 }
 .gpt-detail-buttons a,
 .gpt-detail-buttons button {
-    padding: 10px 20px;
+    padding: 1rem 2rem;
     background-color: var(--primary-color);
     color: #fff;
     text-align: center;
@@ -251,7 +331,7 @@ section h2 {
     transform: translateX(-50%);
     background-color: var(--primary-color);
     color: #fff;
-    padding: 5px 10px;
+    padding: 0.5rem 1rem;
     border-radius: 5px;
     white-space: nowrap;
 }
@@ -287,4 +367,3 @@ section h2 {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-
