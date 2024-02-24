@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h1>${gptData.name}</h1>
                 <p>${gptData.description}</p>
                 <hr>
-                <h2>Usage Guide</h2>
+                <h2>Usage</h2>
                 <video src="${gptData.videoSrc}" controls autoplay></video>
                 <div class="gpt-detail-buttons">
                     <button id="closeDetail">Close</button>
