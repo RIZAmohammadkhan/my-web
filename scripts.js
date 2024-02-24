@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     `;
         detailView.style.display = 'block';
-        
         // Close detail view button
         document.getElementById('closeDetail').addEventListener('click', () => {
             detailView.style.display = 'none';
@@ -25,15 +24,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // Attach click event listeners to each GPT profile
     document.querySelectorAll('.gpt-profile').forEach(profile => {
         profile.addEventListener('click', function(e) {
-            e.preventDefault();
-            const gptData = {
-                imgSrc: this.querySelector('img').src,
-                name: this.querySelector('h3').textContent.trim(),
-                description: this.querySelector('p').textContent.trim(),
-                videoSrc: `videos/${this.querySelector('h3').textContent.replace(/\s+/g, '')}.mp4`,
-                tryNowLink: this.getAttribute('data-try-now-link'), // Assuming each profile has this data attribute
-            };
-            showGptDetailView(gptData);
+            // Check if the profile is part of the 'Upcoming GPTs' section
+            if (this.closest('#upcoming-gpts')) {
+                // Prevent default action and stop the event from propagating
+                e.preventDefault();
+                e.stopPropagation();
+                // No further action is taken, effectively disabling the detailed view for this section
+            } else {
+                // Existing code to show detailed view for other sections
+                e.preventDefault();
+                const gptData = {
+                    imgSrc: this.querySelector('img').src,
+                    name: this.querySelector('h3').textContent.trim(),
+                    description: this.querySelector('p').textContent.trim(),
+                    videoSrc: `videos/${this.querySelector('h3').textContent.replace(/\s+/g, '')}.mp4`,
+                    tryNowLink: this.getAttribute('data-try-now-link'),
+                };
+                showGptDetailView(gptData);
+            }
         });
     });
 

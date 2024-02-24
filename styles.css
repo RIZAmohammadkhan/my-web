@@ -232,3 +232,23 @@ section h2 {
 .gpt-detail-buttons button:hover {
     background-color: var(--secondary-color);
 }
+.coming-soon {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.gpt-profile:hover .coming-soon {
+    display: block;
+}
+
+.gpt-profile {
+    position: relative; /* Ensure the dialogue positions correctly */
+}
