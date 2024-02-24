@@ -105,10 +105,60 @@ body {
     margin: 20px auto;
 }
 
-.more-gpts:hover {
-    background-color: #555;
+.more-gpts:hover{
+    background-color : #555;
 }
 
+.gpt-detail-view {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%; /* Increase the max width for more space */
+    width: auto;  /* Limit the width to ensure it fits on screen */
+    max-height: 100vh; /* Limit the height to ensure it fits on screen */
+    overflow-y: auto; /* Allow scrolling if content is too long */
+    background: #212121;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    z-index: 1001; /* Above the overlay */
+    text-align: center;
+}
+
+/* Ensure the image is circular and fits well */
+.gpt-detail-photo {
+    width: 150px; /* Adjust size as needed */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto; /* Center the image */
+}
+
+
+.gpt-detail-container video {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#closeDetail {
+    display: block;
+    padding: 10px 20px;
+    background-color: #10A37F;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 20px auto;
+}
+
+#closeDetail:hover {
+    background-color: #555;
+}
 section h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -129,6 +179,11 @@ section h2 {
 @media only screen and (max-width: 480px) {
     .profile-container {
         padding: 5px;
+    }
+@media (max-width: 768px) {
+        .gpt-detail-view {
+            width: 95%;
+        }
     }
 
     .gpt-profile {
