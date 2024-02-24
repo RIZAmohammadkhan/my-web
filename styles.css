@@ -293,6 +293,13 @@ section h2 {
     }
 }
 
+
+
+
+.hidden-gpts {
+    display: none;
+}
+
 .gpt-detail-buttons {
     display: flex;
     justify-content: center;
