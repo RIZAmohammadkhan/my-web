@@ -128,7 +128,6 @@ a {
 #closeDetail:hover {
     background-color: var(--secondary-color);
 }
-
 .gpt-detail-view {
     position: fixed;
     top: 50%;
@@ -145,7 +144,9 @@ a {
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     z-index: 1001;
     text-align: center;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transitions for opacity and transform */
 }
+
 
 .gpt-detail-photo {
     width: 15vw;
