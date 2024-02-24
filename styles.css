@@ -71,42 +71,7 @@ a {
     transform: scale(1.1);
 }
 
-.gpt-container,
-.hidden-gpts {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: stretch;
-}
 
-.gpt-profile {
-    text-align: center;
-    width: calc(33.333% - 4rem);
-    margin: 1rem;
-    background: var(--detail-bg-color);
-    border-radius: 10px;
-    padding: 2rem;
-    text-decoration: none;
-    color: #E0E0E0;
-    transition: background-color 0.3s;
-}
-
-.gpt-profile:hover {
-    background-color: var(--hover-bg-color);
-}
-
-.gpt-photo {
-    width: 8vw;
-    height: 8vw;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto 1rem;
-}
-
-.gpt-profile:hover .gpt-photo {
-    transform: scale(1.05);
-}
 
 .more-gpts,
 #tryNow,
@@ -422,4 +387,40 @@ section h2 {
     }
 
     /* Any other tablet-specific styles go here */
+}
+.gpt-container,
+.hidden-gpts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.gpt-profile {
+    text-align: center;
+    width: calc(33.333% - 4rem);
+    margin: 1rem;
+    background: var(--detail-bg-color);
+    border-radius: 10px;
+    padding: 2rem;
+    text-decoration: none;
+    color: #E0E0E0;
+    transition: background-color 0.3s;
+}
+
+.gpt-profile:hover {
+    background-color: var(--hover-bg-color);
+}
+
+.gpt-photo {
+    width: 8vw;
+    height: 8vw;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.gpt-profile:hover .gpt-photo {
+    transform: scale(1.05);
 }
