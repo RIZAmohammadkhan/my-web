@@ -69,3 +69,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, 2000);
 });
+document.addEventListener('DOMContentLoaded', (event) => {
+    const gptContainers = document.querySelectorAll('.gpt-container');
+    gptContainers.forEach((container) => {
+        container.style.display = 'flex';
+    });
+});
