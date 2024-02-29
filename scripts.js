@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
             // Check if the click is from the 'Upcoming GPTs' section
             if (this.closest('#upcoming-gpts')) {
                 // Do nothing for 'Upcoming GPTs' to avoid showing detailed view
-                console.log('Upcoming GPTs do not show detailed view.');
             } else {
                 // Process for other GPT profiles
                 const gptData = {
@@ -58,16 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // 'See More' button functionality
-    const moreGptsButton = document.querySelector('.more-gpts');
-    if (moreGptsButton) {
-        moreGptsButton.addEventListener('click', function() {
-            document.querySelector('.hidden-gpts').style.display = 'flex';
-            this.style.display = 'none';
-        });
-    }
-
     // Hide loading banner after a delay
     setTimeout(() => {
         const loadingBanner = document.getElementById('loadingBanner');
