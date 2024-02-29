@@ -70,12 +70,7 @@ a {
 .profile-photo img:hover {
     transform: scale(1.1);
 }
-.gpt-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: stretch;
-}
+
 
 .gpt-profile {
     text-align: center;
@@ -87,6 +82,9 @@ a {
     text-decoration: none;
     color: #E0E0E0;
     transition: background-color 0.3s;
+    display: inline-grid;
+    justify-content: space-around;
+    align-items: stretch;
 }
 
 .gpt-profile:hover {
