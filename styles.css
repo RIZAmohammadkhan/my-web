@@ -63,12 +63,12 @@ a {
     object-fit: cover;
     margin-left: auto;
     margin-right: auto;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
     padding-right: 1.7rem;
 }
 
 .profile-photo img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 
@@ -98,7 +98,7 @@ a {
     object-fit: cover;
     display: block;
     margin: 0 auto 1rem;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .gpt-profile:hover .gpt-photo {
@@ -338,6 +338,7 @@ section h2 {
     padding: 0.5rem 1rem;
     border-radius: 5px;
     white-space: nowrap;
+    transition: 0.5s ease;
 }
 
 .gpt-profile:hover .coming-soon {
