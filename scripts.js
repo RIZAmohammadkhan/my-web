@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>${gptData.description}</p>
                 <hr>
                 <h2>How to use?</h2>
-                <video src="${gptData.videoSrc}" controls></video>
+                <video src="${gptData.videoSrc}" controls autoplay></video>
                 <div class="gpt-detail-buttons">
                     <button id="closeDetail">Close</button>
                     <a href="${gptData.tryNowLink}" id="tryNow" target="_blank">Try Now</a>
