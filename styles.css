@@ -53,6 +53,7 @@ a {
     background: var(--detail-bg-color);
     color: #DDDDDD;
     margin-right: 1.7rem;
+    cursor: default;
 }
 
 .profile-photo img {
