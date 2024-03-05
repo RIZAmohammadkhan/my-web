@@ -346,7 +346,9 @@ section h2 {
 }
 
 .gpt-profile {
-    position: relative; /* Ensure the dialogue positions correctly */
+    position: relative; 
+    cursor: pointer;
+    /* Ensure the dialogue positions correctly */
 }
 .loading-banner {
     position: fixed;
