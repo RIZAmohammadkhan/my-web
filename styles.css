@@ -156,10 +156,10 @@ a {
     margin: 0 auto;
 }
 
-.gpt-detail-container video {
-    width: 80%;
-    border-radius: 5px;
-    margin-top: 2rem;
+.gpt-detail-container p{
+    font-size: large;
+    font-weight: 500;
+    max-width: 600px;
 }
 
 section h2 {
@@ -295,14 +295,16 @@ section h2 {
     align-items: center;
     margin-top: 2rem;
 }
+#tryNow{
+    font-weight: bold;
+}
 #tryNow,
 #closeDetail {
     margin: 0;
 }
-#tryNow:hover {
-    font-size: 1.05em; /* Slightly larger font size on hover */
-    font-weight: bold; /* Makes the font bold on hover */
-    transition: font-size 0.3s ease, font-weight 0.3s ease; /* Smooth transition for font size and weight */
+#tryNow:hover { /* Slightly larger font size on hover */
+    background-color: #05d09d;
+    transition:0.3s ease; /* Smooth transition for font size and weight */
 }
 .gpt-detail-buttons a,
 .gpt-detail-buttons button {

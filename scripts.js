@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h1>${gptData.name}</h1>
                 <p>${gptData.description}</p>
                 <hr>
-                <p>${gptData.detailed}<br>Just pin the GPT and call by using @${gptData.name} in any chat</p>
+                <p>${gptData.detailed}<hr><br>Just pin the GPT and call by using @${gptData.name} in any chat</p>
                 <div class="gpt-detail-buttons">
                     <button id="closeDetail">Close</button>
                     <a href="${gptData.tryNowLink}" id="tryNow" target="_blank">Try Now</a>
