@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>${gptData.description}</p>
                 <hr>
                 <p>${gptData.detailed}<hr><br>Just pin the GPT and call by using @${gptData.name} in any chat</p>
+                <video src="${gptData.videoSrc}" controls autoplay></video>
                 <div class="gpt-detail-buttons">
                     <button id="closeDetail">Close</button>
                     <a href="${gptData.tryNowLink}" id="tryNow" target="_blank">Try Now</a>
@@ -45,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             description: e.currentTarget.querySelector('p').textContent.trim(),
             detailed: e.currentTarget.getAttribute('data-detailed'),
             tryNowLink: e.currentTarget.getAttribute('data-try-now-link'),
+            videoSrc: `videos/${e.currentTarget.querySelector('h3').textContent.trim()}.mp4`
         };
         showGptDetailView(gptData);
     };
