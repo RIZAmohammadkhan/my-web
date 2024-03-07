@@ -35,6 +35,11 @@ a {
     color: var(--text-color);
 
 }
+.profile-container p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 1rem 0;
+}
 
 h2{
     font-size: xx-large;
@@ -44,7 +49,7 @@ h3{
     font-weight: 900;
 }
 h1{
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 900;
 
 }
@@ -181,7 +186,7 @@ h1{
     width: 100%;
     height: auto;
     max-width: 600px;
-    max-height: 400px;
+    max-height: 350px;
     margin: 0 auto;
     display: block;
     border-radius: 2rem;
@@ -441,4 +446,57 @@ section h2 {
     }
 
     /* Any other tablet-specific styles go here */
+}
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+    .profile-container,
+    .gpt-detail-view {
+        width: 95%; /* Make the container wider on tablets for better use of space */
+    }
+
+    .profile-header,
+    .profile-about,
+    .profile-activity,
+    .profile-photo {
+        /* Adjust the layout, padding, margin, etc., similar to phone styles for consistency */
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .profile-photo img {
+        width: 30vw; /* Adjust the profile photo size */
+        height: 30vw; /* Keep the aspect ratio */
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .gpt-profile {
+        width: 100%; /* Allow each profile to take full width for a more mobile-like experience */
+        margin: 1rem 0;
+        padding: 1rem;
+    }
+
+    .gpt-photo {
+        width: 20vw;
+        height: 20vw;
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    /* Adjust the text size for readability on tablets */
+    .gpt-profile h3,
+    .gpt-profile p {
+        font-size: 4vw;
+    }
+
+    /* Ensure buttons and interactive elements are large enough to be easily tapped */
+    .more-gpts,
+    #tryNow,
+    #closeDetail {
+        padding: 1.2rem 2.4rem;
+        font-size: 3vw; /* Adjust based on tablet screen size for easier interaction */
+    }
+
+    /* Additional tablet-specific adjustments as needed */
 }
