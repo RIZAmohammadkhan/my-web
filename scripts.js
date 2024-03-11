@@ -28,6 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Event listener for closing the detail view with animation
         document.getElementById('closeDetail').addEventListener('click', () => {
+            // Pause the video when the detail view is closed
+            const video = detailView.querySelector('video');
+            if (video) video.pause();
+            
             detailView.style.opacity = '0';
             detailView.style.transform = 'translate(-50%, -60%)'; // Move up on close
             setTimeout(() => {
