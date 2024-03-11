@@ -166,7 +166,7 @@ h1{
     transform: translate(-50%, -50%);
     max-width: 100%;
     width: auto;
-    max-height: auto;
+    max-height: 100vh;
     overflow-y: auto;
     background: var(--bg-color);
     color: #fff;
