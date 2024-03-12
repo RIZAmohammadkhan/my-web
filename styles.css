@@ -510,3 +510,23 @@ section h2 {
 
     /* Additional tablet-specific adjustments as needed */
 }
+#downloadResume {
+    position: fixed; /* Fix the position relative to the viewport */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    padding: 1rem 2rem; /* Padding for size */
+    background-color: var(--primary-color); /* Use the primary color for consistency */
+    color: #fff; /* Text color */
+    text-align: center; /* Center the text */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded corners like the Try Now button */
+    cursor: pointer; /* Cursor pointer for clickable effect */
+    text-decoration: none; /* Remove underline from link */
+    font-weight: bold; /* Bold font for emphasis */
+    z-index: 1002; /* Ensure it's above other content */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+#downloadResume:hover {
+    background-color: #05d09d; /* Lighter shade on hover for interaction feedback */
+}
