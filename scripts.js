@@ -4,9 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const detailView = document.getElementById('gpt-detail-view');
         detailView.innerHTML = `
             <div class="gpt-detail-container">
-                <img src="${gptData.imgSrc}" alt="${gptData.name}" class="gpt-detail-photo">
                 <h1>${gptData.name}</h1>
-                <p>${gptData.description}</p>
                 <hr>
                 <p>${gptData.detailed}<hr><br>Just pin the GPT and call by using @${gptData.name} in any chat</p>
                 <video src="${gptData.videoSrc}" controls autoplay></video>
