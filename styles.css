@@ -512,8 +512,8 @@ section h2 {
 }
 #downloadResume {
     position: fixed; /* Fix the position relative to the viewport */
-    bottom: 20px; /* Distance from the bottom */
-    right: 20px; /* Distance from the right */
+    bottom:30px; /* Distance from the bottom */
+    right: 50px; /* Distance from the right */
     padding: 1rem 2rem; /* Padding for size */
     background-color: var(--primary-color); /* Use the primary color for consistency */
     color: #fff; /* Text color */
@@ -529,4 +529,29 @@ section h2 {
 
 #downloadResume:hover {
     background-color: #05d09d; /* Lighter shade on hover for interaction feedback */
+}
+#downloadResume {
+    display: flex; /* Use flexbox for centering the icon */
+    align-items: center; /* Center align-items vertically */
+    justify-content: center; /* Center justify-content horizontally */
+}
+
+
+@media only screen and (max-width: 480px) {
+    #downloadResume {
+        width: 100px; /* Set the width for the circular shape */
+        height: 50px; /* Set the height to match the width for a perfect circle */
+        padding: 0; /* Remove padding */
+        border-radius: 17%; /* Circular shape */
+        display: flex; /* Use flexbox for centering the icon */
+        align-items: center; /* Center align-items vertically */
+        justify-content: center; /* Center justify-content horizontally */
+    }
+    #downloadResume .material-icons {
+        display: block; /* Ensure the icon is displayed */
+        font-size: 24px; /* Icon size */
+    }
+    #downloadResume span + span { /* Target any span following another span (if you have text in another span) */
+        display: none; /* Hide text on small screens */
+    }
 }
